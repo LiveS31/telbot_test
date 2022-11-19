@@ -551,7 +551,7 @@ def code(message):
     user_answer = 'НЕТ ТАКОЙ ОШИБКИ!!!'
 
     print("Пользователь:", message.from_user.first_name)
-    print("Сообщение пользователя:", message.text.upper())
+    print("Сообщение пользователя:", message.text)
     code = message.text.upper()
     if code in errors:
         fca.send_message(message.chat.id, errors[message.text.upper()])
