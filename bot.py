@@ -4,7 +4,7 @@ import telebot
 
 fca = telebot.TeleBot('5731589447:AAHxW5k2j5xHVy2jY2NAzVfHIRCgmtU_q90')
 codes = ''
-errors = {'P0016':'Синхронизация коленчатого вала/ распределительного вала. (Обнаружена погрешность позиционирования распределительного вала:нет совладения по фазе с коленчатым валом.)',
+errors = {'P0016': 'Синхронизация коленчатого вала/ распределительного вала. (Обнаружена погрешность позиционирования распределительного вала:нет совладения по фазе с коленчатым валом.)',
          'P01XX': 'Измерители топлива и воздуха',
          'P0100': 'Неисправность цепи датчика расхода воздуха',
          'P0101': 'Выход сигнала из допустимого диапазона',
@@ -557,9 +557,9 @@ def code(message):
         fca.send_message(message.chat.id, errors[message.text.upper()])
     else:
         fca.send_message(message.chat.id, user_answer, parse_mode='html')
-    # print ("Сообщенеие пользоватеerrors[message.text])
+
     fca.send_message(message.chat.id, 'введите ошибку:')
-    # print (message)
+
 
 
 fca.polling(none_stop=True)
