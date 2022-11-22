@@ -1,8 +1,8 @@
 # code bot
-
+from typing import Any
 import telebot
 
-fca = telebot.TeleBot('5731589447:AAHxW5k2j5xHVy2jY2NAzVfHIRCgmtU_q90')
+fca = telebot.TeleBot('')
 codes = ''
 errors = {'P0016': 'Синхронизация коленчатого вала/ распределительного вала. (Обнаружена погрешность позиционирования распределительного вала:нет совладения по фазе с коленчатым валом.)',
          'P01XX': 'Измерители топлива и воздуха',
